@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.dark{
+  background-color: #0d1117 !important;
+  color: #fff !important;
+}
+.light {
+  background-color:#fff !important;
+  color: #0d1117 !important;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  margin: 0 auto;
+  height: 50px;
+  background-color: #0d1117;
+  color: #fff;
+  
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80px;
+    font-size: 1.1rem;
+  }
+
+  .userAvatar{
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.userLoginScreen {
+  max-height: 100vh;
+  max-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 150px;
+  }
+.userInput{
+  margin-bottom: 15px;
+}
+  button {
+    font-size: 1.1rem;
+    display: flex;
+    margin: auto;
+    background-color: #376952 !important;
+}
+
+}
+
+.InputForm {
+  background-color: #fff;
+  padding: 1.5rem;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  button{
+    font-size: 1.5rem;
+  }
+
+}
+
+.homeScreen {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .InputForm {
+    margin-top: 1rem;
+  }
+
+}
+.iconsWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  margin-left: 155px;
+}
+
+.mt-20 {
+  margin-top: 25px !important;
+  background-color: #376952 !important;
+  &:hover{
+    background-color: black !important;
+  }
+}
+h5 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.loader-div {
+  margin: 0 auto;
+}
+.iconsWrap span:hover {
+  color: black;
+}
+.btn-sm {
+  padding: 0 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: #376952;
+}
+
+form.InputForm {
+  border-radius: 4px;
+  box-shadow: 1px 2px 1px 1px  rgba(0,0,0,0.75), 0px 1px 1px 0px  rgba(0,0,0,0.75), 0px 1px 3px 0px  rgba(0,0,0,0.75);
+}
+
+.updateForm{
+  display: flex;
+  margin: auto;
+  button{
+    display: flex;
+    margin: auto;
+  }
+}
+
+.dark .modalBox {
+  background-color: #d0d0d5;
+  color: #1b1b32;
+}
+
+.alert {
+  position: absolute;
+  right: 5px;
+}
+
+.taskBg {
+  margin-top: 15px;
+  background-color: #555;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
+}
+
+.taskBg div {
+  display: flex;
+  align-items: center;
+}
+
+.taskNumber {
+  color: #999;
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskBg .taskText {
+  flex: 1;
+}
+
+.taskBg .done .taskText {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.taskBg .iconsWrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+
+.taskBg .iconsWrap span {
+  display: inline-block;
+  margin: 0px 10px 0 10px;
+  cursor: pointer;
+  color: #00ff89;
+}
+
+.taskBg .iconsWrap span:hover {
+  color: black;
+}
+.themeSwitch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

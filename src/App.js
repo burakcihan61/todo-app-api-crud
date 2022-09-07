@@ -1,32 +1,31 @@
 import React, { createContext, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Read from "./components/read/Read";
-import Update from "./components/update/Update";
-import "./App.css";
-import UserLogin from "./components/UserLogin.js/UserLogin";
+import "./style.scss";
+import Container from "./components/Container/Container";
+import User from "./components/User/User";
+import Update from "./components/Update/Update";
 import ReactSwitch from "react-switch";
 
 export const ThemeContext = createContext(null);
 
 const App = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    setTheme((curr) => (curr === "dark" ? "light" : "dark"));
   };
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="container App" id={theme}>
-        <h2 className="todoAppTitle">To Do App</h2>
-        <br />
+      <div className={theme}>
         <Routes>
-          <Route path="/read" element={<Read />} />
-          <Route path="/" element={<UserLogin />} />
-          <Route path="/read" element={<Read />} />
-          <Route path="/update" element={<Update />} />
+          <Route path="/" element={<User />} />
+          <Route path="/todo-app" exact element={<Container />} />
+          <Route path="/update" exact element={<Update />} />
         </Routes>
-        <h4>Theme</h4>
-        <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+        <div className="themeSwitch">
+          <h4>Theme</h4>
+          <ReactSwitch onChange={toggleTheme} checked={theme === "light"} />
+        </div>
       </div>
     </ThemeContext.Provider>
   );

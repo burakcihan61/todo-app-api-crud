@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
+import Header from "../Header/Header";
+import axios from "axios";
 
 const Update = () => {
   const [content, setContent] = useState("");
@@ -22,30 +24,24 @@ const Update = () => {
   }, []);
   return (
     <div>
-      <form className="todoEditInput">
-        <div className="input-group mb-3 ">
-          <span className="input-group-text " id="inputGroup-sizing-default">
-            Edit To Do
-          </span>
-          <input
-            name="fname"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            placeholder="edit to do"
-            type="text"
-            className="form-control"
-            aria-label="Sizing example input "
-            aria-describedby="inputGroup-sizing-default"
-          />
-        </div>
-        <Link to="/read">
-          <button
+      <Header />
+      <h5>To Do Update</h5>
+      <form className="InputForm updateForm">
+        <TextField
+          id="todoEntry"
+          label="Enter Todo"
+          variant="outlined"
+          onChange={(e) => setContent(e.target.value)}
+        />
+        <Link to="/todo-app">
+          <Button
             type="submit"
+            className="mt-20"
+            variant="contained"
             onClick={sendDataToAPI}
-            className="btn btn-primary"
           >
-            Update
-          </button>
+            Add
+          </Button>
         </Link>
       </form>
     </div>
